@@ -10,4 +10,9 @@
 
 @implementation OpenBikeSegue
 
+- (void)perform
+{
+    NSLog(@"Segue from %@ to %@", self.sourceViewController, self.destinationViewController);
+}
+
 @end
