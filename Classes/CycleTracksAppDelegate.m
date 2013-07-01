@@ -49,100 +49,103 @@
 #import "NSBundle+PSExtensions.h"
 
 
+@implementation UINavigationBar (NavBarShadow)
+
+@end
+
+
 @implementation CycleTracksAppDelegate
 
-@synthesize window;
-@synthesize tabBarController;
+@synthesize window = _window;
 @synthesize uniqueIDHash;
+@synthesize viewController = _viewController;
+@synthesize recordVC;
+@synthesize frontVC, backVC;
+
+#pragma mark - JSSlidingViewControllerDelegate
+
+- (BOOL)slidingViewController:(JSSlidingViewController *)viewController shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientationsForSlidingViewController:(JSSlidingViewController *)viewController {
+    return UIInterfaceOrientationMaskAll;
+}
+
+#pragma mark - Convenience
+
+- (void)menuButtonPressed:(id)sender {
+    if (self.viewController.isOpen == NO) {
+        [self.viewController openSlider:YES completion:nil];
+    } else {
+        [self.viewController closeSlider:YES completion:nil];
+    }
+}
+
+- (void)lockSlider {
+    self.viewController.locked = YES;
+}
+
+- (void)unlockSlider {
+    self.viewController.locked = NO;
+}
 
 
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {
-   NSLog(@"Permusoft's %@ v%@ (%@)", [NSBundle displayName], [NSBundle version], [NSBundle bundleIdentifier]);
-   NSLog(@"Copyright %@", [NSBundle copyright]);
-
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    NSLog(@"Permusoft's %@ v%@ (%@)", [NSBundle displayName], [NSBundle version], [NSBundle bundleIdentifier]);
+    NSLog(@"Copyright %@", [NSBundle copyright]);
+    
 	// disable screen lock
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
 	[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 	
 	//[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackTranslucent;
 	
-   NSManagedObjectContext *context = [self managedObjectContext];
-   if (!context) {
-      // Handle the error.
-   }
+    NSManagedObjectContext *context = [self managedObjectContext];
+    if (!context) {
+        // Handle the error.
+    }
 	
 	// init our unique ID hash
 	[self initUniqueIDHash];
 	
 	// initialize trip manager with the managed object context
 	TripManager *manager = [[TripManager alloc] initWithManagedObjectContext:context];
-	
-	
-	/*
-	 // initialize each tab's root view controller with the trip manager
-	 RecordTripViewController *recordTripViewController = [[[RecordTripViewController alloc]
-	 initWithTripManager:manager]
-	 autorelease];
-	 
-	 // create tab bar items for the tabs themselves
-	 UIImage *image = [UIImage imageNamed:@"tabbar_record.png"];
-	 UITabBarItem *recordTab = [[UITabBarItem alloc] initWithTitle:@"Record New Trip" image:image tag:101];
-	 recordTripViewController.tabBarItem = recordTab;
-	 
-	 SavedTripsViewController *savedTripsViewController = [[[SavedTripsViewController alloc]
-	 initWithTripManager:manager]
-	 autorelease];
-	 
-	 // RecordingInProgressDelegate
-	 savedTripsViewController.delegate = recordTripViewController;
-	 
-	 image = [UIImage imageNamed:@"tabbar_view.png"];
-	 UITabBarItem *viewTab = [[UITabBarItem alloc] initWithTitle:@"View Saved Trips" image:image tag:102];
-	 savedTripsViewController.tabBarItem = viewTab;
-	 
-	 // create a navigation controller stack for each tab, set delegates to respective root view controller
-	 UINavigationController *recordTripNavController = [[UINavigationController alloc]
-	 initWithRootViewController:recordTripViewController];
-	 recordTripNavController.delegate = recordTripViewController;
-	 recordTripNavController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-	 
-	 UINavigationController *savedTripsNavController = [[UINavigationController alloc]
-	 initWithRootViewController:savedTripsViewController];
-	 savedTripsNavController.delegate = savedTripsViewController;
-	 savedTripsNavController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-	 */
-	
-	
-	UINavigationController	*recordNav	= (UINavigationController*)[tabBarController.viewControllers
-                                                                   objectAtIndex:1];
-	//[navCon popToRootViewControllerAnimated:NO];
-   recordVC	= (RecordTripViewController *)[recordNav topViewController];
-	[recordVC initTripManager:manager];
-	
-	
-	UINavigationController	*tripsNav	= (UINavigationController*)[tabBarController.viewControllers
-                                                                   objectAtIndex:2];
-	//[navCon popToRootViewControllerAnimated:NO];
-	SavedTripsViewController *tripsVC	= (SavedTripsViewController *)[tripsNav topViewController];
-	tripsVC.delegate					= recordVC;
-	[tripsVC initTripManager:manager];
-   
-	// select Record tab at launch
-	tabBarController.selectedIndex = 1;
-	
-	UINavigationController	*nav	= (UINavigationController*)[tabBarController.viewControllers
-                                                             objectAtIndex:3];
-	PersonalInfoViewController *vc	= (PersonalInfoViewController *)[nav topViewController];
-	vc.managedObjectContext			= context;
-	
-   
-	// Add the tab bar controller's current view as a subview of the window
-   [window setFrame:[[UIScreen mainScreen] bounds]];
-   [window addSubview:tabBarController.view];
-	[window makeKeyAndVisible];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"OpenBike" bundle:nil];
+    
+    self.backVC = [storyboard instantiateViewControllerWithIdentifier:@"SideNavigation"];
+    self.recordVC = [storyboard instantiateViewControllerWithIdentifier:@"TripRecord"];
+    [recordVC initTripManager:manager];
+
+    self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:self.recordVC backViewController:self.backVC];
+    self.viewController.delegate = self;
+    
+//    if (isLoggedIn) {
+//        [self.window setRootViewController:initViewController];
+//    } else {
+//        [(UINavigationController *)self.window.rootViewController pushViewController:initViewController animated:NO];
+//    }
+//    self.recordVC = [[RecordTripViewController alloc] initWithNibName:@"RecordMap" bundle:nil];
+//    [recordVC initTripManager:manager];
+//    
+//
+//    self.backVC = [[SideNavigationTableViewController alloc] initWithNibName:@"SideNavigationTableViewController" bundle:nil];
+//    
+//    self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:self.recordVC backViewController:self.backVC];
+//    self.viewController.delegate = self;
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //[_window setFrame:[[UIScreen mainScreen] bounds]];
+    _window.rootViewController = self.viewController;
+	[_window makeKeyAndVisible];
+    
+    return YES;
 }
 
 
@@ -189,7 +192,7 @@
    if (recordVC) {
       [recordVC handleForegrounding];
       if (recordVC.recording) {
-         tabBarController.selectedIndex = 1;
+         //tabBarController.selectedIndex = 1;
       }
    }
 }

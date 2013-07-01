@@ -33,29 +33,28 @@
 // Adapted to Open Bike by Gregory Kip (gkip@permusoft.com) and others.
 //
 
+#import "RecordTripViewController.h"
+#import "SideNavigationTableViewController.h"
+#import "JSSlidingViewController.h"
 
-@class RecordTripViewController;
-
-@interface CycleTracksAppDelegate : NSObject <UIApplicationDelegate>
+@interface CycleTracksAppDelegate : UIResponder <UIApplicationDelegate, JSSlidingViewControllerDelegate>
 {
-   NSManagedObjectModel *managedObjectModel;
-   NSManagedObjectContext *managedObjectContext;
-   NSPersistentStoreCoordinator *persistentStoreCoordinator;
-   
-   UIWindow *window;
-   UITabBarController *tabBarController;
-	NSString *uniqueIDHash;
-   UIBackgroundTaskIdentifier bgTask;
-   RecordTripViewController *recordVC;
+    NSManagedObjectModel *managedObjectModel;
+    NSManagedObjectContext *managedObjectContext;
+    NSPersistentStoreCoordinator *persistentStoreCoordinator;
+    
+    UIWindow *window;
+    NSString *uniqueIDHash;
+    UIBackgroundTaskIdentifier bgTask;
 }
 
-@property (nonatomic, strong, readonly) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, strong, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-@property (nonatomic, strong) IBOutlet UIWindow *window;
-@property (nonatomic, strong) IBOutlet UITabBarController *tabBarController;
+@property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) NSString *uniqueIDHash;
+
+@property (strong, nonatomic) JSSlidingViewController *viewController;
+@property (strong, nonatomic) RecordTripViewController *recordVC;
+@property (strong, nonatomic) SideNavigationTableViewController *backVC;
+@property (strong, nonatomic) UIViewController *frontVC;
 
 - (NSString *)applicationDocumentsDirectory;
 - (void)initUniqueIDHash;

@@ -27,7 +27,6 @@
 		6411A16C106A05FE00C201F0 /* LargeCounter.png in Resources */ = {isa = PBXBuildFile; fileRef = 6411A16B106A05FE00C201F0 /* LargeCounter.png */; };
 		6411A199106A90FB00C201F0 /* tabbar_record.png in Resources */ = {isa = PBXBuildFile; fileRef = 6411A197106A90FB00C201F0 /* tabbar_record.png */; };
 		6411A19A106A90FB00C201F0 /* tabbar_view.png in Resources */ = {isa = PBXBuildFile; fileRef = 6411A198106A90FB00C201F0 /* tabbar_view.png */; };
-		64210F29113508B800415F1A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64210F28113508B800415F1A /* MainWindow.xib */; };
 		64210F5411350AE200415F1A /* RecordNewTrip.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64210F5311350AE200415F1A /* RecordNewTrip.xib */; };
 		64210F6111350C8500415F1A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64210F6011350C8500415F1A /* AboutViewController.m */; };
 		6426476E1073FEC300E43DEF /* ReminderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6426476D1073FEC300E43DEF /* ReminderManager.m */; };
@@ -51,7 +50,6 @@
 		64AF2EE410714BC900DDDF07 /* start_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AF2EE010714BC900DDDF07 /* start_button.png */; };
 		64BEA66B1145857E00BF8E94 /* tabbar_instructions.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BEA6691145857E00BF8E94 /* tabbar_instructions.png */; };
 		64BEA66C1145857E00BF8E94 /* tabbar_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BEA66A1145857E00BF8E94 /* tabbar_settings.png */; };
-		64C8D40311386B26008BCADE /* RecordMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64C8D40211386B26008BCADE /* RecordMap.xib */; };
 		64C8D40511386C9F008BCADE /* LCD-screen-288x126.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C8D40411386C9F008BCADE /* LCD-screen-288x126.png */; };
 		64C8D41C11387949008BCADE /* record-map-frame-288x141.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C8D41B11387949008BCADE /* record-map-frame-288x141.png */; };
 		64C8D433113889B1008BCADE /* settings_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C8D432113889B1008BCADE /* settings_icon2.png */; };
@@ -69,6 +67,12 @@
 		64F824E6106AFFA4001413F8 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F824E5106AFFA4001413F8 /* PersonalInfoViewController.m */; };
 		64FCC5B411352242000FA1B6 /* PersonalInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FCC5B311352242000FA1B6 /* PersonalInfo.xib */; };
 		64FCC5B811352371000FA1B6 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FCC5B711352371000FA1B6 /* 20-gear2.png */; };
+		D0772E38178128FD005776DC /* frontViewControllerDropShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D0772E34178128FD005776DC /* frontViewControllerDropShadow.png */; };
+		D0772E39178128FD005776DC /* frontViewControllerDropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0772E35178128FD005776DC /* frontViewControllerDropShadow@2x.png */; };
+		D0772E3A178128FD005776DC /* JSSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0772E37178128FD005776DC /* JSSlidingViewController.m */; };
+		D0772E3F17813154005776DC /* SideNavigationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0772E3D17813154005776DC /* SideNavigationTableViewController.m */; };
+		D0772E421781C113005776DC /* OpenBike.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0772E411781C113005776DC /* OpenBike.storyboard */; };
+		D0772E4A1781CFD6005776DC /* OpenBikeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D0772E491781CFD6005776DC /* OpenBikeSegue.m */; };
 		E0ACB75D175544870068473C /* UIDevice+UDID.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB75C175544870068473C /* UIDevice+UDID.m */; };
 		E0ACB772175546DA0068473C /* NSBundle+PSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB760175546DA0068473C /* NSBundle+PSExtensions.m */; };
 		E0ACB777175546DA0068473C /* NSObject+PSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB76A175546DA0068473C /* NSObject+PSExtensions.m */; };
@@ -141,7 +145,6 @@
 		6411A16B106A05FE00C201F0 /* LargeCounter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LargeCounter.png; sourceTree = "<group>"; };
 		6411A197106A90FB00C201F0 /* tabbar_record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_record.png; sourceTree = "<group>"; };
 		6411A198106A90FB00C201F0 /* tabbar_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_view.png; sourceTree = "<group>"; };
-		64210F28113508B800415F1A /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		64210F5311350AE200415F1A /* RecordNewTrip.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordNewTrip.xib; sourceTree = "<group>"; };
 		64210F5F11350C8500415F1A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		64210F6011350C8500415F1A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -175,7 +178,6 @@
 		64AF2EE010714BC900DDDF07 /* start_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_button.png; sourceTree = "<group>"; };
 		64BEA6691145857E00BF8E94 /* tabbar_instructions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_instructions.png; sourceTree = "<group>"; };
 		64BEA66A1145857E00BF8E94 /* tabbar_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_settings.png; sourceTree = "<group>"; };
-		64C8D40211386B26008BCADE /* RecordMap.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordMap.xib; sourceTree = "<group>"; };
 		64C8D40411386C9F008BCADE /* LCD-screen-288x126.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LCD-screen-288x126.png"; sourceTree = "<group>"; };
 		64C8D41B11387949008BCADE /* record-map-frame-288x141.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record-map-frame-288x141.png"; sourceTree = "<group>"; };
 		64C8D432113889B1008BCADE /* settings_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_icon2.png; sourceTree = "<group>"; };
@@ -205,6 +207,16 @@
 		64FCC5B311352242000FA1B6 /* PersonalInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfo.xib; sourceTree = "<group>"; };
 		64FCC5B711352371000FA1B6 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20-gear2.png"; path = "../20-gear2.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* OpenBike-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OpenBike-Info.plist"; sourceTree = "<group>"; };
+		D0772E34178128FD005776DC /* frontViewControllerDropShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frontViewControllerDropShadow.png; path = Vendor/JSSlidingViewController/frontViewControllerDropShadow.png; sourceTree = "<group>"; };
+		D0772E35178128FD005776DC /* frontViewControllerDropShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frontViewControllerDropShadow@2x.png"; path = "Vendor/JSSlidingViewController/frontViewControllerDropShadow@2x.png"; sourceTree = "<group>"; };
+		D0772E36178128FD005776DC /* JSSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSSlidingViewController.h; path = Vendor/JSSlidingViewController/JSSlidingViewController.h; sourceTree = "<group>"; };
+		D0772E37178128FD005776DC /* JSSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSSlidingViewController.m; path = Vendor/JSSlidingViewController/JSSlidingViewController.m; sourceTree = "<group>"; };
+		D0772E3C17813154005776DC /* SideNavigationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideNavigationTableViewController.h; sourceTree = "<group>"; };
+		D0772E3D17813154005776DC /* SideNavigationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideNavigationTableViewController.m; sourceTree = "<group>"; };
+		D0772E411781C113005776DC /* OpenBike.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OpenBike.storyboard; sourceTree = "<group>"; };
+		D0772E481781CFD6005776DC /* OpenBikeSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenBikeSegue.h; sourceTree = "<group>"; };
+		D0772E491781CFD6005776DC /* OpenBikeSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenBikeSegue.m; sourceTree = "<group>"; };
+		D0CABBC21781E5A600EFB8C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = Vendor/JSSlidingViewController/README.md; sourceTree = "<group>"; };
 		E01E223117761CDF007653C4 /* legal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = legal.txt; sourceTree = "<group>"; };
 		E0ACB75B175544870068473C /* UIDevice+UDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+UDID.h"; path = "Classes/UIDevice+UDID.h"; sourceTree = "<group>"; };
 		E0ACB75C175544870068473C /* UIDevice+UDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+UDID.m"; path = "Classes/UIDevice+UDID.m"; sourceTree = "<group>"; };
@@ -278,6 +290,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D0772E3B1781307E005776DC /* Navigation */,
 				645E4EDA1200C1C800EFF0E6 /* LoadingView.h */,
 				645E4EDB1200C1C800EFF0E6 /* LoadingView.m */,
 				6433E5D3106D66EA00C27387 /* ActivityIndicatorDelegate.h */,
@@ -325,10 +338,10 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D0772E3217812825005776DC /* Vendor */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				6411992B1068371B00C201F0 /* Data Model */,
 				64119AA81068672100C201F0 /* Trip Purpose data source */,
-				64F8239A106AB3E1001413F8 /* TouchJSON */,
 				E0ACB75E175546DA0068473C /* Foundation */,
 				E01E223017761C7E007653C4 /* UIKit */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -358,9 +371,7 @@
 				6458114D107AA4D30075DABD /* bicycle-bell-normalized.aiff */,
 				8D1107310486CEB800E47090 /* OpenBike-Info.plist */,
 				64577E28106DC2FD003ACBFD /* dist.plist */,
-				64210F28113508B800415F1A /* MainWindow.xib */,
 				642F14791071D3F10050BCB9 /* MapViewController.xib */,
-				64C8D40211386B26008BCADE /* RecordMap.xib */,
 				64210F5311350AE200415F1A /* RecordNewTrip.xib */,
 				E0FA74B51774FA7B004CF28F /* TripDetailPicker.xib */,
 				64119A9B1068665B00C201F0 /* TripPurposePicker.xib */,
@@ -528,6 +539,39 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		D0772E3217812825005776DC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				D0772E3317812846005776DC /* JSSlidingViewController */,
+				64F8239A106AB3E1001413F8 /* TouchJSON */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		D0772E3317812846005776DC /* JSSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0CABBC21781E5A600EFB8C9 /* README.md */,
+				D0772E34178128FD005776DC /* frontViewControllerDropShadow.png */,
+				D0772E35178128FD005776DC /* frontViewControllerDropShadow@2x.png */,
+				D0772E36178128FD005776DC /* JSSlidingViewController.h */,
+				D0772E37178128FD005776DC /* JSSlidingViewController.m */,
+			);
+			name = JSSlidingViewController;
+			sourceTree = "<group>";
+		};
+		D0772E3B1781307E005776DC /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D0772E3C17813154005776DC /* SideNavigationTableViewController.h */,
+				D0772E3D17813154005776DC /* SideNavigationTableViewController.m */,
+				D0772E411781C113005776DC /* OpenBike.storyboard */,
+				D0772E481781CFD6005776DC /* OpenBikeSegue.h */,
+				D0772E491781CFD6005776DC /* OpenBikeSegue.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
 		E01E223017761C7E007653C4 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -618,11 +662,9 @@
 				6458114E107AA4D30075DABD /* bicycle-bell-normalized.aiff in Resources */,
 				6405FB46107E9038004B453B /* GreenCheckMark3.png in Resources */,
 				644ED3E410853DEC008725A8 /* commuter2.png in Resources */,
-				64210F29113508B800415F1A /* MainWindow.xib in Resources */,
 				64210F5411350AE200415F1A /* RecordNewTrip.xib in Resources */,
 				64FCC5B411352242000FA1B6 /* PersonalInfo.xib in Resources */,
 				64FCC5B811352371000FA1B6 /* 20-gear2.png in Resources */,
-				64C8D40311386B26008BCADE /* RecordMap.xib in Resources */,
 				64C8D40511386C9F008BCADE /* LCD-screen-288x126.png in Resources */,
 				64C8D41C11387949008BCADE /* record-map-frame-288x141.png in Resources */,
 				64C8D433113889B1008BCADE /* settings_icon2.png in Resources */,
@@ -659,6 +701,9 @@
 				E0FA74B61774FA7B004CF28F /* TripDetailPicker.xib in Resources */,
 				E0FA74B91774FAD8004CF28F /* Star-White-Half.png in Resources */,
 				E0FA74BA1774FAD8004CF28F /* Star-White.png in Resources */,
+				D0772E38178128FD005776DC /* frontViewControllerDropShadow.png in Resources */,
+				D0772E39178128FD005776DC /* frontViewControllerDropShadow@2x.png in Resources */,
+				D0772E421781C113005776DC /* OpenBike.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +748,9 @@
 				E0FA74B11774FA0F004CF28F /* TripDetailViewController.m in Sources */,
 				E0FA74B41774FA3F004CF28F /* StarSlider.m in Sources */,
 				E0FA74BD17752F9C004CF28F /* Trip.m in Sources */,
+				D0772E3A178128FD005776DC /* JSSlidingViewController.m in Sources */,
+				D0772E3F17813154005776DC /* SideNavigationTableViewController.m in Sources */,
+				D0772E4A1781CFD6005776DC /* OpenBikeSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,8 +762,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gregory Kip (FG2MHX6374)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -725,7 +773,8 @@
 				INFOPLIST_FILE = "OpenBike-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = OpenBike;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "36201297-4C8D-46DE-8E18-28300F8A6197";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -857,12 +906,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gregory Kip (FG2MHX6374)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "36201297-4C8D-46DE-8E18-28300F8A6197";
 				SDKROOT = iphoneos;
 			};

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIMainStoryboardFile</key>
+	<string>OpenBike</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDisplayName</key>
@@ -41,8 +43,6 @@
 	<true/>
 	<key>NSHumanReadableCopyright</key>
 	<string>© Permusoft, San Francisco County Transportation Authority, and others as indicated.</string>
-	<key>NSMainNibFile</key>
-	<string>MainWindow</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

@@ -29,10 +29,11 @@
 //	e-mail Elizabeth Sall at the SFCTA <elizabeth.sall@sfcta.org>
 
 #import <UIKit/UIKit.h>
+#import "CycleTracksAppDelegate.h"
 
 int main(int argc, char *argv[]) {
     @autoreleasepool {
-        int retVal = UIApplicationMain(argc, argv, nil, nil);
+        int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([CycleTracksAppDelegate class]));
         return retVal;
     }
 }
