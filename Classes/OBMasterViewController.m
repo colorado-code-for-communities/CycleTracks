@@ -7,18 +7,38 @@
 //
 
 #import "OBMasterViewController.h"
+#import "PersonalInfoViewController.h"
+#import "RecordTripViewController.h"
+#import "SavedTripsViewController.h"
 
 @interface OBMasterViewController ()
+
+@property (nonatomic, weak, readwrite) id<OBMasterViewControllerDelegate> delegate;
 
 @end
 
 @implementation OBMasterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+@synthesize selectedViewController = _selectedViewController;
+@synthesize viewControllers = _viewControllers;
+
+- (id) initWithDelegate:(id<OBMasterViewControllerDelegate>)delegate;
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    self = [super init];
+    if (self)
+    {
+        _delegate = delegate;
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"OpenBike" bundle:nil];
+        NSArray *viewControllers =
+        @[
+          [storyboard instantiateViewControllerWithIdentifier:@"TripRecord"], // 0
+          [storyboard instantiateViewControllerWithIdentifier:@"SavedTrips"], // 1
+          [storyboard instantiateViewControllerWithIdentifier:@"AboutInfo"], // 2
+          [storyboard instantiateViewControllerWithIdentifier:@"PersonalInfo"] // 3
+          // add others
+          ];
+        
+        _viewControllers = viewControllers;
     }
     return self;
 }
@@ -26,7 +46,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

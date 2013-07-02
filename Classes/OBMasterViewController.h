@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@class OBMasterViewController;
+@class SideNavigationTableViewController;
+
+@protocol OBMasterViewControllerDelegate <NSObject>
+
+- (OBMasterViewController *) frontVC;
+- (SideNavigationTableViewController *) backVC;
+
+@end
+
 @interface OBMasterViewController : UIViewController
+
+@property (nonatomic, strong, readwrite) id selectedViewController;
+@property (nonatomic, strong, readwrite) NSArray *viewControllers;
+
+- (id) initWithDelegate:(id<OBMasterViewControllerDelegate>)delegate;
 
 @end
