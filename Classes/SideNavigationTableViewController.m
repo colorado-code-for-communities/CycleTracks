@@ -131,6 +131,9 @@
             [segue perform];
         }
     }
+    
+    // close the reveal menu
+    [_delegate menuButtonPressed:nil];
 }
 
 @end

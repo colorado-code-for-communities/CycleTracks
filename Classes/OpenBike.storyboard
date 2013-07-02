@@ -439,6 +439,7 @@
                 <relationship kind="action" name="cancel:" candidateClass="UIButton"/>
                 <relationship kind="action" name="save:" candidateClass="UIButton"/>
                 <relationship kind="action" name="start:" candidateClass="UIButton"/>
+                <relationship kind="action" name="toggleRevealMenu:"/>
                 <relationship kind="outlet" name="cancelButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="distCounter" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>

@@ -16,6 +16,8 @@
 - (OBMasterViewController *) frontVC;
 - (SideNavigationTableViewController *) backVC;
 
+- (void)menuButtonPressed:(id)sender;
+
 @end
 
 @interface OBMasterViewController : UIViewController
