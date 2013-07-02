@@ -32,6 +32,7 @@
 //
 
 #import "AboutViewController.h"
+#import "CycleTracksAppDelegate.h"
 #import "constants.h"
 
 
@@ -84,7 +85,11 @@
 	// e.g. self.myOutlet = nil;
 }
 
-
+- (IBAction)toggleRevealMenu:(id)sender
+{
+    CycleTracksAppDelegate *delegate = (CycleTracksAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [delegate menuButtonPressed:sender];
+}
 
 
 @end

@@ -40,6 +40,8 @@
 
 
 #import "CycleTracksAppDelegate.h"
+#import "OBMasterViewController.h"
+#import "SideNavigationTableViewController.h"
 #import "PersonalInfoViewController.h"
 #import "RecordTripViewController.h"
 #import "SavedTripsViewController.h"
@@ -48,6 +50,12 @@
 #import "UIDevice+UDID.h"
 #import "NSBundle+PSExtensions.h"
 
+@interface CycleTracksAppDelegate()<OBMasterViewControllerDelegate>
+
+@property (strong, nonatomic) OBMasterViewController *frontVC;
+@property (strong, nonatomic) SideNavigationTableViewController *backVC;
+
+@end
 
 @implementation UINavigationBar (NavBarShadow)
 
@@ -59,7 +67,6 @@
 @synthesize window = _window;
 @synthesize uniqueIDHash;
 @synthesize viewController = _viewController;
-@synthesize recordVC;
 @synthesize frontVC, backVC;
 
 #pragma mark - JSSlidingViewControllerDelegate
@@ -114,16 +121,25 @@
 	// init our unique ID hash
 	[self initUniqueIDHash];
 	
+    
+    self.frontVC = [[OBMasterViewController alloc] initWithDelegate:self];
 	// initialize trip manager with the managed object context
 	TripManager *manager = [[TripManager alloc] initWithManagedObjectContext:context];
+    RecordTripViewController *recordVC = [self.frontVC.viewControllers objectAtIndex:0];
+    [recordVC initTripManager:manager];
+    self.frontVC.selectedViewController = recordVC;
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"OpenBike" bundle:nil];
-    
     self.backVC = [storyboard instantiateViewControllerWithIdentifier:@"SideNavigation"];
-    self.recordVC = [storyboard instantiateViewControllerWithIdentifier:@"TripRecord"];
-    [recordVC initTripManager:manager];
-
-    self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:self.recordVC backViewController:self.backVC];
+    
+    SavedTripsViewController *tripsVC = [self.frontVC.viewControllers objectAtIndex:1];
+	tripsVC.delegate = recordVC;
+	[tripsVC initTripManager:manager];
+    
+    PersonalInfoViewController *personalVC = [self.frontVC.viewControllers objectAtIndex:3];
+    personalVC.managedObjectContext = context;
+    
+    self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:[self.frontVC.viewControllers objectAtIndex:0] backViewController:self.backVC];
     self.viewController.delegate = self;
     
 //    if (isLoggedIn) {
@@ -158,13 +174,13 @@
  */
 - (void)applicationDidEnterBackground:(UIApplication *)application {
    
-   if (recordVC) {
+   if ([self.frontVC.viewControllers objectAtIndex:0]) {
       // Let the RecordTripViewController take care of its business
-      [recordVC handleBackgrounding];
+      [[self.frontVC.viewControllers objectAtIndex:0] handleBackgrounding];
    }
    
    // If we're not recording -- don't bother with the background task
-   if (recordVC && ![recordVC recording]) {
+   if ([self.frontVC.viewControllers objectAtIndex:0] && ![[self.frontVC.viewControllers objectAtIndex:0] recording]) {
       NSLog(@"applicationDidEnterBackground - bgTask=%d (should be zero)", bgTask);
       return;
    }
@@ -189,9 +205,9 @@
    }
    bgTask = 0;
    
-   if (recordVC) {
-      [recordVC handleForegrounding];
-      if (recordVC.recording) {
+   if ([self.frontVC.viewControllers objectAtIndex:0]) {
+      [[self.frontVC.viewControllers objectAtIndex:0] handleForegrounding];
+      if ([[self.frontVC.viewControllers objectAtIndex:0] recording]) {
          //tabBarController.selectedIndex = 1;
       }
    }
@@ -202,8 +218,8 @@
  */
 - (void)applicationWillTerminate:(UIApplication *)application {
 	
-   if (recordVC) {
-      [recordVC handleTermination];
+   if ([self.frontVC.viewControllers objectAtIndex:0]) {
+      [[self.frontVC.viewControllers objectAtIndex:0] handleTermination];
    }
    
    NSError *error = nil;

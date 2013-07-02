@@ -49,7 +49,7 @@
 	if (self = [super init])
 	{
 		// Nab the unique device id hash from our delegate.
-		CycleTracksAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+		CycleTracksAppDelegate *delegate = (CycleTracksAppDelegate*)[[UIApplication sharedApplication] delegate];
 		self.deviceUniqueIdHash = delegate.uniqueIDHash;
 		
 		// create request.

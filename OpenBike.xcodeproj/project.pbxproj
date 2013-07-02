@@ -27,7 +27,6 @@
 		6411A16C106A05FE00C201F0 /* LargeCounter.png in Resources */ = {isa = PBXBuildFile; fileRef = 6411A16B106A05FE00C201F0 /* LargeCounter.png */; };
 		6411A199106A90FB00C201F0 /* tabbar_record.png in Resources */ = {isa = PBXBuildFile; fileRef = 6411A197106A90FB00C201F0 /* tabbar_record.png */; };
 		6411A19A106A90FB00C201F0 /* tabbar_view.png in Resources */ = {isa = PBXBuildFile; fileRef = 6411A198106A90FB00C201F0 /* tabbar_view.png */; };
-		64210F5411350AE200415F1A /* RecordNewTrip.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64210F5311350AE200415F1A /* RecordNewTrip.xib */; };
 		64210F6111350C8500415F1A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64210F6011350C8500415F1A /* AboutViewController.m */; };
 		6426476E1073FEC300E43DEF /* ReminderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6426476D1073FEC300E43DEF /* ReminderManager.m */; };
 		642647FD107435A200E43DEF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642647FC107435A200E43DEF /* AudioToolbox.framework */; };
@@ -65,8 +64,11 @@
 		64F823C6106AB42B001413F8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F823C5106AB42B001413F8 /* Security.framework */; };
 		64F823E1106AC151001413F8 /* SaveRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F823E0106AC151001413F8 /* SaveRequest.m */; };
 		64F824E6106AFFA4001413F8 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F824E5106AFFA4001413F8 /* PersonalInfoViewController.m */; };
-		64FCC5B411352242000FA1B6 /* PersonalInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FCC5B311352242000FA1B6 /* PersonalInfo.xib */; };
 		64FCC5B811352371000FA1B6 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FCC5B711352371000FA1B6 /* 20-gear2.png */; };
+		D05235441783188000A5294C /* OBMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05235431783188000A5294C /* OBMasterViewController.m */; };
+		D05235471783584500A5294C /* grip.png in Resources */ = {isa = PBXBuildFile; fileRef = D05235451783584500A5294C /* grip.png */; };
+		D05235481783584500A5294C /* grip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D05235461783584500A5294C /* grip@2x.png */; };
+		D056AB3A17823DA500957002 /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = D056AB3917823DA500957002 /* MKMapView+ZoomLevel.m */; };
 		D0772E38178128FD005776DC /* frontViewControllerDropShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D0772E34178128FD005776DC /* frontViewControllerDropShadow.png */; };
 		D0772E39178128FD005776DC /* frontViewControllerDropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0772E35178128FD005776DC /* frontViewControllerDropShadow@2x.png */; };
 		D0772E3A178128FD005776DC /* JSSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0772E37178128FD005776DC /* JSSlidingViewController.m */; };
@@ -145,7 +147,6 @@
 		6411A16B106A05FE00C201F0 /* LargeCounter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LargeCounter.png; sourceTree = "<group>"; };
 		6411A197106A90FB00C201F0 /* tabbar_record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_record.png; sourceTree = "<group>"; };
 		6411A198106A90FB00C201F0 /* tabbar_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_view.png; sourceTree = "<group>"; };
-		64210F5311350AE200415F1A /* RecordNewTrip.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordNewTrip.xib; sourceTree = "<group>"; };
 		64210F5F11350C8500415F1A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		64210F6011350C8500415F1A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		6426476C1073FEC300E43DEF /* ReminderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderManager.h; sourceTree = "<group>"; };
@@ -204,9 +205,14 @@
 		64F823E0106AC151001413F8 /* SaveRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveRequest.m; sourceTree = "<group>"; };
 		64F824E4106AFFA4001413F8 /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoViewController.h; sourceTree = "<group>"; };
 		64F824E5106AFFA4001413F8 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoViewController.m; sourceTree = "<group>"; };
-		64FCC5B311352242000FA1B6 /* PersonalInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalInfo.xib; sourceTree = "<group>"; };
 		64FCC5B711352371000FA1B6 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20-gear2.png"; path = "../20-gear2.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* OpenBike-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OpenBike-Info.plist"; sourceTree = "<group>"; };
+		D05235421783188000A5294C /* OBMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBMasterViewController.h; sourceTree = "<group>"; };
+		D05235431783188000A5294C /* OBMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBMasterViewController.m; sourceTree = "<group>"; };
+		D05235451783584500A5294C /* grip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grip.png; sourceTree = "<group>"; };
+		D05235461783584500A5294C /* grip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grip@2x.png"; sourceTree = "<group>"; };
+		D056AB3817823DA500957002 /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
+		D056AB3917823DA500957002 /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
 		D0772E34178128FD005776DC /* frontViewControllerDropShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frontViewControllerDropShadow.png; path = Vendor/JSSlidingViewController/frontViewControllerDropShadow.png; sourceTree = "<group>"; };
 		D0772E35178128FD005776DC /* frontViewControllerDropShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frontViewControllerDropShadow@2x.png"; path = "Vendor/JSSlidingViewController/frontViewControllerDropShadow@2x.png"; sourceTree = "<group>"; };
 		D0772E36178128FD005776DC /* JSSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSSlidingViewController.h; path = Vendor/JSSlidingViewController/JSSlidingViewController.h; sourceTree = "<group>"; };
@@ -338,6 +344,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D056AB3717823D4B00957002 /* MapKitExtentions */,
 				D0772E3217812825005776DC /* Vendor */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				6411992B1068371B00C201F0 /* Data Model */,
@@ -372,10 +379,8 @@
 				8D1107310486CEB800E47090 /* OpenBike-Info.plist */,
 				64577E28106DC2FD003ACBFD /* dist.plist */,
 				642F14791071D3F10050BCB9 /* MapViewController.xib */,
-				64210F5311350AE200415F1A /* RecordNewTrip.xib */,
 				E0FA74B51774FA7B004CF28F /* TripDetailPicker.xib */,
 				64119A9B1068665B00C201F0 /* TripPurposePicker.xib */,
-				64FCC5B311352242000FA1B6 /* PersonalInfo.xib */,
 				E01E223117761CDF007653C4 /* legal.txt */,
 			);
 			name = Resources;
@@ -425,6 +430,8 @@
 		6411A16A106A05DE00C201F0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D05235451783584500A5294C /* grip.png */,
+				D05235461783584500A5294C /* grip@2x.png */,
 				E0D3A4DF1772803A009653AD /* icon-114.png */,
 				E0D3A4DD17728032009653AD /* icon-57.png */,
 				E0FA74B71774FAD8004CF28F /* Star-White-Half.png */,
@@ -539,6 +546,15 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		D056AB3717823D4B00957002 /* MapKitExtentions */ = {
+			isa = PBXGroup;
+			children = (
+				D056AB3817823DA500957002 /* MKMapView+ZoomLevel.h */,
+				D056AB3917823DA500957002 /* MKMapView+ZoomLevel.m */,
+			);
+			name = MapKitExtentions;
+			sourceTree = "<group>";
+		};
 		D0772E3217812825005776DC /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,6 +584,8 @@
 				D0772E411781C113005776DC /* OpenBike.storyboard */,
 				D0772E481781CFD6005776DC /* OpenBikeSegue.h */,
 				D0772E491781CFD6005776DC /* OpenBikeSegue.m */,
+				D05235421783188000A5294C /* OBMasterViewController.h */,
+				D05235431783188000A5294C /* OBMasterViewController.m */,
 			);
 			name = Navigation;
 			sourceTree = "<group>";
@@ -662,8 +680,6 @@
 				6458114E107AA4D30075DABD /* bicycle-bell-normalized.aiff in Resources */,
 				6405FB46107E9038004B453B /* GreenCheckMark3.png in Resources */,
 				644ED3E410853DEC008725A8 /* commuter2.png in Resources */,
-				64210F5411350AE200415F1A /* RecordNewTrip.xib in Resources */,
-				64FCC5B411352242000FA1B6 /* PersonalInfo.xib in Resources */,
 				64FCC5B811352371000FA1B6 /* 20-gear2.png in Resources */,
 				64C8D40511386C9F008BCADE /* LCD-screen-288x126.png in Resources */,
 				64C8D41C11387949008BCADE /* record-map-frame-288x141.png in Resources */,
@@ -704,6 +720,8 @@
 				D0772E38178128FD005776DC /* frontViewControllerDropShadow.png in Resources */,
 				D0772E39178128FD005776DC /* frontViewControllerDropShadow@2x.png in Resources */,
 				D0772E421781C113005776DC /* OpenBike.storyboard in Resources */,
+				D05235471783584500A5294C /* grip.png in Resources */,
+				D05235481783584500A5294C /* grip@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +769,8 @@
 				D0772E3A178128FD005776DC /* JSSlidingViewController.m in Sources */,
 				D0772E3F17813154005776DC /* SideNavigationTableViewController.m in Sources */,
 				D0772E4A1781CFD6005776DC /* OpenBikeSegue.m in Sources */,
+				D056AB3A17823DA500957002 /* MKMapView+ZoomLevel.m in Sources */,
+				D05235441783188000A5294C /* OBMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

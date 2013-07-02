@@ -43,6 +43,8 @@
 #import "TripManager.h"
 #import "Trip.h"
 #import "User.h"
+//#import "MKMapView+ZoomLevel.h"
+#import "CycleTracksAppDelegate.h"
 
 #define kBatteryLevelThreshold	0.20
 
@@ -50,8 +52,12 @@
 #define kBatteryLowStopRecording    201
 #define kBatteryLowNotRecording     202
 
+#define DENVER_CO_LATITUDE          39.73934
+#define DENVER_CO_LONGITUDE         -104.98480
+
 @implementation RecordTripViewController
 
+@synthesize mapView = _mapView;
 @synthesize locationManager, tripManager, reminderManager;
 @synthesize startButton, cancelButton;
 @synthesize timer, timeCounter, distCounter;
@@ -204,26 +210,26 @@
 
 #pragma mark MKMapViewDelegate methods
 
-/*
+
  - (void)mapViewDidFinishLoadingMap:(MKMapView *)theMapView
  {
- NSLog(@"mapViewDidFinishLoadingMap");
- if ( didUpdateUserLocation )
- {
- MKCoordinateRegion region = { theMapView.userLocation.location.coordinate, { 0.0078, 0.0068 } };
- [theMapView setRegion:region animated:YES];
- }
+     NSLog(@"mapViewDidFinishLoadingMap");
+     if ( didUpdateUserLocation )
+     {
+         MKCoordinateRegion region = { theMapView.userLocation.location.coordinate, { 0.0078, 0.0068 } };
+         [theMapView setRegion:region animated:YES];
+     }
  }
  
- 
+/*
  - (void)mapView:(MKMapView *)theMapView regionDidChangeAnimated:(BOOL)animated
  {
- NSLog(@"mapView changed region");
- if ( didUpdateUserLocation )
- {
- MKCoordinateRegion region = { theMapView.userLocation.location.coordinate, { 0.0078, 0.0068 } };
- [theMapView setRegion:region animated:YES];
- }
+     NSLog(@"mapView changed region");
+     if ( didUpdateUserLocation )
+     {
+         MKCoordinateRegion region = { theMapView.userLocation.location.coordinate, { 0.0078, 0.0068 } };
+         [theMapView setRegion:region animated:YES];
+     }
  }
  */
 
@@ -304,13 +310,17 @@
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString: kInstructionsURL]];
 }
 
+- (IBAction)toggleRevealMenu:(id)sender
+{
+    CycleTracksAppDelegate *delegate = (CycleTracksAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [delegate menuButtonPressed:sender];
+}
 
 - (void)viewDidLoad
 {
 	NSLog(@"RecordTripViewController viewDidLoad");
    [super viewDidLoad];
 	//[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackTranslucent;
-	self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
    
    UIImage *startButtonImage = [UIImage imageNamed:@"start_button"];
    UIImage *cancelButtonImage = [UIImage imageNamed:@"cancel_button"];
@@ -324,15 +334,18 @@
       [startButton setBackgroundImage:[startButtonImage resizableImageWithCapInsets:UIEdgeInsetsMake(48,20,48,20)] forState:UIControlStateNormal];
       [cancelButton setBackgroundImage:[cancelButtonImage resizableImageWithCapInsets:UIEdgeInsetsMake(48,20,48,20)] forState:UIControlStateNormal];
    }
-   
-	
-	// init map region to Denver
-	MKCoordinateRegion region = { { 39.73934, -104.98480 }, { 0.10825, 0.10825 } };
-	[mapView setRegion:region animated:NO];
-	
+    
 	self.recording = NO;
 	self.shouldUpdateCounter = NO;
 	
+    self.mapView.delegate = self;
+    // init map region to Denver
+    //CLLocationCoordinate2D centerCoord = { DENVER_CO_LATITUDE, DENVER_CO_LONGITUDE };
+    //[mapView setCenterCoordinate:centerCoord zoomLevel:14 animated:NO]; // ZOOM_LEVEL = 14
+    
+    MKCoordinateRegion region = { { DENVER_CO_LATITUDE, DENVER_CO_LONGITUDE }, { 0.10825, 0.10825 } };
+    [mapView setRegion:region animated:NO];
+    
 	// Start the location manager.
 	[[self getLocationManager] startUpdatingLocation];
 	
@@ -356,7 +369,7 @@
 	}
    
 	NSLog(@"battery level = %f%%", device.batteryLevel * 100.0 );
-   
+       
 	// check if any user data has already been saved and pre-select personal info cell accordingly
 	if ( [self hasUserInfoBeenSaved] )
 		[self setSaved:YES];

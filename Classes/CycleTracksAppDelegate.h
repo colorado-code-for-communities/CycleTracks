@@ -33,8 +33,6 @@
 // Adapted to Open Bike by Gregory Kip (gkip@permusoft.com) and others.
 //
 
-#import "RecordTripViewController.h"
-#import "SideNavigationTableViewController.h"
 #import "JSSlidingViewController.h"
 
 @interface CycleTracksAppDelegate : UIResponder <UIApplicationDelegate, JSSlidingViewControllerDelegate>
@@ -52,12 +50,10 @@
 @property (nonatomic, strong) NSString *uniqueIDHash;
 
 @property (strong, nonatomic) JSSlidingViewController *viewController;
-@property (strong, nonatomic) RecordTripViewController *recordVC;
-@property (strong, nonatomic) SideNavigationTableViewController *backVC;
-@property (strong, nonatomic) UIViewController *frontVC;
 
 - (NSString *)applicationDocumentsDirectory;
 - (void)initUniqueIDHash;
+- (void)menuButtonPressed:(id)sender;
 
 @end
 

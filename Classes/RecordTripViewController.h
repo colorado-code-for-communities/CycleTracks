@@ -87,6 +87,9 @@
 
 //@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
+@property (strong, nonatomic) MKMapView *mapView;
+
+
 @property (nonatomic, strong) CLLocationManager *locationManager;
 /*
 @property (nonatomic, retain) UITableViewCell	*tripPurposeCell;
