@@ -125,18 +125,21 @@
     self.frontVC = [[OBMasterViewController alloc] initWithDelegate:self];
 	// initialize trip manager with the managed object context
 	TripManager *manager = [[TripManager alloc] initWithManagedObjectContext:context];
-    RecordTripViewController *recordVC = [self.frontVC.viewControllers objectAtIndex:0];
+    UINavigationController *recordVCNav = [self.frontVC.viewControllers objectAtIndex:0];
+    RecordTripViewController *recordVC = (RecordTripViewController*)[recordVCNav topViewController];
     [recordVC initTripManager:manager];
-    self.frontVC.selectedViewController = recordVC;
+    self.frontVC.selectedViewController = recordVCNav;
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"OpenBike" bundle:nil];
     self.backVC = [storyboard instantiateViewControllerWithIdentifier:@"SideNavigation"];
     
-    SavedTripsViewController *tripsVC = [self.frontVC.viewControllers objectAtIndex:1];
+    UINavigationController *tripsVCNav = [self.frontVC.viewControllers objectAtIndex:1];
+    SavedTripsViewController *tripsVC = (SavedTripsViewController*)[tripsVCNav topViewController];
 	tripsVC.delegate = recordVC;
 	[tripsVC initTripManager:manager];
     
-    PersonalInfoViewController *personalVC = [self.frontVC.viewControllers objectAtIndex:3];
+    UINavigationController *personalVCNav = [self.frontVC.viewControllers objectAtIndex:3];
+    PersonalInfoViewController *personalVC = (PersonalInfoViewController*)[personalVCNav topViewController];
     personalVC.managedObjectContext = context;
     
     self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:[self.frontVC.viewControllers objectAtIndex:0] backViewController:self.backVC];

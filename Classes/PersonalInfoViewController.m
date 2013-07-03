@@ -35,6 +35,7 @@
 
 
 #import "PersonalInfoViewController.h"
+#import "CycleTracksAppDelegate.h"
 #import "User.h"
 
 #define kMaxCyclingFreq 3
@@ -135,6 +136,11 @@
 	return noob;
 }
 
+- (IBAction)toggleRevealMenu:(id)sender
+{
+    CycleTracksAppDelegate *appDelegate = (CycleTracksAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate menuButtonPressed:sender];
+}
 
 - (void)viewDidLoad
 {

@@ -31,10 +31,10 @@
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"OpenBike" bundle:nil];
         NSArray *viewControllers =
         @[
-          [storyboard instantiateViewControllerWithIdentifier:@"TripRecord"], // 0
-          [storyboard instantiateViewControllerWithIdentifier:@"SavedTrips"], // 1
+          [storyboard instantiateViewControllerWithIdentifier:@"TripRecordNav"], // 0
+          [storyboard instantiateViewControllerWithIdentifier:@"SavedTripsNav"], // 1
           [storyboard instantiateViewControllerWithIdentifier:@"AboutInfo"], // 2
-          [storyboard instantiateViewControllerWithIdentifier:@"PersonalInfo"] // 3
+          [storyboard instantiateViewControllerWithIdentifier:@"PersonalInfoNav"] // 3
           // add others
           ];
         

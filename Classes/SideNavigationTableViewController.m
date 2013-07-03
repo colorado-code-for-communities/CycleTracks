@@ -122,7 +122,7 @@
     {
         id destinationVC = [viewControllers objectAtIndex:idx];
         
-        if ( ! [_delegate.frontVC.selectedViewController isKindOfClass:[destinationVC class]])
+        if ( ! [_delegate.frontVC.selectedViewController isEqual:destinationVC])
         {
             _delegate.frontVC.selectedViewController = destinationVC;
             OpenBikeSegue *segue = [[OpenBikeSegue alloc] initWithIdentifier:@"segue"

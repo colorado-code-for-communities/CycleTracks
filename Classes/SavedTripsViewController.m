@@ -33,7 +33,7 @@
 // Adapted to Open Bike by Gregory Kip (gkip@permusoft.com) and others.
 //
 
-
+#import "CycleTracksAppDelegate.h"
 #import "constants.h"
 #import "Coord.h"
 #import "LoadingView.h"
@@ -162,6 +162,11 @@
 
 }
 
+- (IBAction)toggleRevealMenu:(id)sender
+{
+    CycleTracksAppDelegate *appDelegate = (CycleTracksAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate menuButtonPressed:sender];
+}
 
 - (void)viewDidLoad
 {
@@ -169,7 +174,7 @@
 	self.tableView.rowHeight = kRowHeight;
 
 	// Set up the buttons.
-	self.navigationItem.leftBarButtonItem = self.editButtonItem;
+	self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 	
 	// load trips from CoreData
