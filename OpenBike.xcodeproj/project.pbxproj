@@ -57,6 +57,16 @@
 		64F823E1106AC151001413F8 /* SaveRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F823E0106AC151001413F8 /* SaveRequest.m */; };
 		64F824E6106AFFA4001413F8 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F824E5106AFFA4001413F8 /* PersonalInfoViewController.m */; };
 		64FCC5B811352371000FA1B6 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FCC5B711352371000FA1B6 /* 20-gear2.png */; };
+		D0C8010F17909F96003817A6 /* OBMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8010917909F96003817A6 /* OBMasterViewController.m */; };
+		D0C8011017909F96003817A6 /* OpenBike.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C8010A17909F96003817A6 /* OpenBike.storyboard */; };
+		D0C8011117909F96003817A6 /* OpenBikeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8010C17909F96003817A6 /* OpenBikeSegue.m */; };
+		D0C8011217909F96003817A6 /* SideNavigationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8010E17909F96003817A6 /* SideNavigationTableViewController.m */; };
+		D0C8011A17909FE3003817A6 /* frontViewControllerDropShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C8011517909FE3003817A6 /* frontViewControllerDropShadow.png */; };
+		D0C8011B17909FE3003817A6 /* frontViewControllerDropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C8011617909FE3003817A6 /* frontViewControllerDropShadow@2x.png */; };
+		D0C8011C17909FE3003817A6 /* JSSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8011817909FE3003817A6 /* JSSlidingViewController.m */; };
+		D0C8011D17909FE3003817A6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D0C8011917909FE3003817A6 /* README.md */; };
+		D0C801201790A0B4003817A6 /* grip.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C8011E1790A0B4003817A6 /* grip.png */; };
+		D0C801211790A0B4003817A6 /* grip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C8011F1790A0B4003817A6 /* grip@2x.png */; };
 		E0123BB61783E3680063842F /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E0123BA81783E3680063842F /* CDataScanner.m */; };
 		E0123BB71783E3680063842F /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E0123BAB1783E3680063842F /* CDataScanner_Extensions.m */; };
 		E0123BB81783E3680063842F /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E0123BAD1783E3680063842F /* NSDictionary_JSONExtensions.m */; };
@@ -179,6 +189,20 @@
 		64F824E5106AFFA4001413F8 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoViewController.m; sourceTree = "<group>"; };
 		64FCC5B711352371000FA1B6 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20-gear2.png"; path = "../20-gear2.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* OpenBike-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OpenBike-Info.plist"; sourceTree = "<group>"; };
+		D0C8010817909F96003817A6 /* OBMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBMasterViewController.h; sourceTree = "<group>"; };
+		D0C8010917909F96003817A6 /* OBMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBMasterViewController.m; sourceTree = "<group>"; };
+		D0C8010A17909F96003817A6 /* OpenBike.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OpenBike.storyboard; sourceTree = "<group>"; };
+		D0C8010B17909F96003817A6 /* OpenBikeSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenBikeSegue.h; sourceTree = "<group>"; };
+		D0C8010C17909F96003817A6 /* OpenBikeSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenBikeSegue.m; sourceTree = "<group>"; };
+		D0C8010D17909F96003817A6 /* SideNavigationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideNavigationTableViewController.h; sourceTree = "<group>"; };
+		D0C8010E17909F96003817A6 /* SideNavigationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideNavigationTableViewController.m; sourceTree = "<group>"; };
+		D0C8011517909FE3003817A6 /* frontViewControllerDropShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frontViewControllerDropShadow.png; sourceTree = "<group>"; };
+		D0C8011617909FE3003817A6 /* frontViewControllerDropShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontViewControllerDropShadow@2x.png"; sourceTree = "<group>"; };
+		D0C8011717909FE3003817A6 /* JSSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSlidingViewController.h; sourceTree = "<group>"; };
+		D0C8011817909FE3003817A6 /* JSSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSlidingViewController.m; sourceTree = "<group>"; };
+		D0C8011917909FE3003817A6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D0C8011E1790A0B4003817A6 /* grip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grip.png; sourceTree = "<group>"; };
+		D0C8011F1790A0B4003817A6 /* grip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grip@2x.png"; sourceTree = "<group>"; };
 		E0123BA71783E3680063842F /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
 		E0123BA81783E3680063842F /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
 		E0123BAA1783E3680063842F /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
@@ -265,7 +289,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D0772E3B1781307E005776DC /* Navigation */,
+				D0C8010717909F2A003817A6 /* Navigation */,
 				645E4EDA1200C1C800EFF0E6 /* LoadingView.h */,
 				645E4EDB1200C1C800EFF0E6 /* LoadingView.m */,
 				6433E5D3106D66EA00C27387 /* ActivityIndicatorDelegate.h */,
@@ -313,8 +337,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				D056AB3717823D4B00957002 /* MapKitExtentions */,
-				D0772E3217812825005776DC /* Vendor */,
+				D0C8011317909FE3003817A6 /* Vendor */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				6411992B1068371B00C201F0 /* Data Model */,
 				64119AA81068672100C201F0 /* Trip Purpose data source */,
@@ -399,8 +422,8 @@
 		6411A16A106A05DE00C201F0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D05235451783584500A5294C /* grip.png */,
-				D05235461783584500A5294C /* grip@2x.png */,
+				D0C8011E1790A0B4003817A6 /* grip.png */,
+				D0C8011F1790A0B4003817A6 /* grip@2x.png */,
 				E0D3A4DF1772803A009653AD /* icon-114.png */,
 				E0D3A4DD17728032009653AD /* icon-57.png */,
 				E0FA74B71774FAD8004CF28F /* Star-White-Half.png */,
@@ -466,6 +489,40 @@
 				64FCC5B711352371000FA1B6 /* 20-gear2.png */,
 			);
 			path = TabBarIcons;
+			sourceTree = "<group>";
+		};
+		D0C8010717909F2A003817A6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D0C8010817909F96003817A6 /* OBMasterViewController.h */,
+				D0C8010917909F96003817A6 /* OBMasterViewController.m */,
+				D0C8010A17909F96003817A6 /* OpenBike.storyboard */,
+				D0C8010B17909F96003817A6 /* OpenBikeSegue.h */,
+				D0C8010C17909F96003817A6 /* OpenBikeSegue.m */,
+				D0C8010D17909F96003817A6 /* SideNavigationTableViewController.h */,
+				D0C8010E17909F96003817A6 /* SideNavigationTableViewController.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		D0C8011317909FE3003817A6 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				D0C8011417909FE3003817A6 /* JSSlidingViewController */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		D0C8011417909FE3003817A6 /* JSSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0C8011517909FE3003817A6 /* frontViewControllerDropShadow.png */,
+				D0C8011617909FE3003817A6 /* frontViewControllerDropShadow@2x.png */,
+				D0C8011717909FE3003817A6 /* JSSlidingViewController.h */,
+				D0C8011817909FE3003817A6 /* JSSlidingViewController.m */,
+				D0C8011917909FE3003817A6 /* README.md */,
+			);
+			path = JSSlidingViewController;
 			sourceTree = "<group>";
 		};
 		E0123BA61783E3680063842F /* TouchJSON */ = {
@@ -640,11 +697,12 @@
 				E0FA74B61774FA7B004CF28F /* TripDetailPicker.xib in Resources */,
 				E0FA74B91774FAD8004CF28F /* Star-White-Half.png in Resources */,
 				E0FA74BA1774FAD8004CF28F /* Star-White.png in Resources */,
-				D0772E38178128FD005776DC /* frontViewControllerDropShadow.png in Resources */,
-				D0772E39178128FD005776DC /* frontViewControllerDropShadow@2x.png in Resources */,
-				D0772E421781C113005776DC /* OpenBike.storyboard in Resources */,
-				D05235471783584500A5294C /* grip.png in Resources */,
-				D05235481783584500A5294C /* grip@2x.png in Resources */,
+				D0C8011017909F96003817A6 /* OpenBike.storyboard in Resources */,
+				D0C8011A17909FE3003817A6 /* frontViewControllerDropShadow.png in Resources */,
+				D0C8011B17909FE3003817A6 /* frontViewControllerDropShadow@2x.png in Resources */,
+				D0C8011D17909FE3003817A6 /* README.md in Resources */,
+				D0C801201790A0B4003817A6 /* grip.png in Resources */,
+				D0C801211790A0B4003817A6 /* grip@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +745,10 @@
 				E0123BCB1783E6940063842F /* NSString+PSExtensions.m in Sources */,
 				E0123BCC1783E6940063842F /* PSExtensions+Foundation.m in Sources */,
 				E0123BCD1783E6940063842F /* UIDevice+UDID.m in Sources */,
+				D0C8010F17909F96003817A6 /* OBMasterViewController.m in Sources */,
+				D0C8011117909F96003817A6 /* OpenBikeSegue.m in Sources */,
+				D0C8011217909F96003817A6 /* SideNavigationTableViewController.m in Sources */,
+				D0C8011C17909FE3003817A6 /* JSSlidingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
