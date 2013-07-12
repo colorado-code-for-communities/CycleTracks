@@ -393,10 +393,19 @@
 		NSLog(@"TripManager WARNING no saved user data to encode");
 	
 	NSLog(@"serializing user data to JSON...");
-	NSString *jsonUserData = [[CJSONSerializer serializer] serializeObject:userDict];
-	NSLog(@"%@", jsonUserData );
+   NSError *serializationError = nil;
+	NSData *jsonUserData = [[CJSONSerializer serializer] serializeObject:userDict error:&serializationError];
+   if (serializationError != nil) {
+      NSLog(@"Error! Could not serialize JSON data.");
+      NSLog(@"%@", [error description]);
+      jsonUserData = nil;
+   }
+   
+   else {
+      NSLog(@"%@", jsonUserData);
+   }
 	
-	return jsonUserData;
+	return [[NSString alloc] initWithData:jsonUserData encoding:NSUTF8StringEncoding];
 }
 
 
@@ -501,8 +510,20 @@
 #endif
    
 	NSLog(@"serializing trip data to JSON...");
-	NSString *jsonTripData = [[CJSONSerializer serializer] serializeObject:tripDict];
-	NSLog(@"%@", jsonTripData );
+   NSError *serializationError = nil;
+	NSData *jsonTripData = [[CJSONSerializer serializer] serializeObject:tripDict error:&error];
+   
+   if (serializationError != nil) {
+      NSLog(@"Error! Could not serialize JSON Trip data.");
+      NSLog(@"%@", [error description]);
+      jsonTripData = nil;
+   }
+   
+   else {
+      NSLog(@"%@", jsonTripData);
+   }
+   
+   NSString *jsonTripString = [[NSString alloc] initWithData:jsonTripData encoding:NSUTF8StringEncoding];
 	
 	// get trip purpose
 	NSString *purpose;
@@ -527,18 +548,18 @@
 	NSLog(@"start: %@", start);
    
 	// encode user data
-	NSString *jsonUserData = [self jsonEncodeUserData];
+	NSString *jsonUserString = [self jsonEncodeUserData];
    
 	// NOTE: device hash added by SaveRequest initWithPostVars
 	NSDictionary *postVars = [NSDictionary dictionaryWithObjectsAndKeys:
-                             jsonTripData, @"coords",
+                             jsonTripString, @"coords",
                              easeString, @"ease",
                              safetyString, @"safety",
                              convenienceString, @"convenience",
                              purpose, @"purpose",
                              notes, @"notes",
                              start, @"start",
-                             jsonUserData, @"user",
+                             jsonUserString, @"user",
                              [NSString stringWithFormat:@"%d", kSaveProtocolVersion], @"version",
                              nil];
    	
