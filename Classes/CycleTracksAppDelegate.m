@@ -126,7 +126,7 @@
 	// initialize trip manager with the managed object context
 	TripManager *manager = [[TripManager alloc] initWithManagedObjectContext:context];
     UINavigationController *recordVCNav = [self.frontVC.viewControllers objectAtIndex:0];
-    RecordTripViewController *recordVC = (RecordTripViewController*)[recordVCNav topViewController];
+    recordVC = (RecordTripViewController*)[recordVCNav topViewController];
     [recordVC initTripManager:manager];
     self.frontVC.selectedViewController = recordVCNav;
     
@@ -177,13 +177,13 @@
  */
 - (void)applicationDidEnterBackground:(UIApplication *)application {
    
-   if ([self.frontVC.viewControllers objectAtIndex:0]) {
+   if (recordVC) {
       // Let the RecordTripViewController take care of its business
-      [[self.frontVC.viewControllers objectAtIndex:0] handleBackgrounding];
+      [recordVC handleBackgrounding];
    }
    
    // If we're not recording -- don't bother with the background task
-   if ([self.frontVC.viewControllers objectAtIndex:0] && ![[self.frontVC.viewControllers objectAtIndex:0] recording]) {
+   if (recordVC && ![recordVC recording]) {
       NSLog(@"applicationDidEnterBackground - bgTask=%d (should be zero)", bgTask);
       return;
    }
@@ -203,14 +203,15 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
    NSLog(@"applicationWillEnterForeground - bgTask=%d", bgTask);
+    
    if (bgTask) {
       [application endBackgroundTask:bgTask];
    }
    bgTask = 0;
    
-   if ([self.frontVC.viewControllers objectAtIndex:0]) {
-      [[self.frontVC.viewControllers objectAtIndex:0] handleForegrounding];
-      if ([[self.frontVC.viewControllers objectAtIndex:0] recording]) {
+   if (recordVC) {
+      [recordVC handleForegrounding];
+      if ([recordVC recording]) {
          //tabBarController.selectedIndex = 1;
       }
    }
@@ -220,9 +221,9 @@
  applicationWillTerminate: saves changes in the application's managed object context before the application terminates.
  */
 - (void)applicationWillTerminate:(UIApplication *)application {
-	
-   if ([self.frontVC.viewControllers objectAtIndex:0]) {
-      [[self.frontVC.viewControllers objectAtIndex:0] handleTermination];
+    
+   if (recordVC) {
+      [recordVC handleTermination];
    }
    
    NSError *error = nil;

@@ -38,7 +38,7 @@
           // add others
           ];
         
-        _viewControllers = viewControllers;
+        _viewControllers = [viewControllers mutableCopy];
     }
     return self;
 }

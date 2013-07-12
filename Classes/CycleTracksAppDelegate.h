@@ -35,6 +35,8 @@
 
 #import "JSSlidingViewController.h"
 
+@class RecordTripViewController;
+
 @interface CycleTracksAppDelegate : UIResponder <UIApplicationDelegate, JSSlidingViewControllerDelegate>
 {
     NSManagedObjectModel *managedObjectModel;
@@ -44,6 +46,7 @@
     UIWindow *window;
     NSString *uniqueIDHash;
     UIBackgroundTaskIdentifier bgTask;
+    RecordTripViewController *recordVC;
 }
 
 @property (strong, nonatomic) UIWindow *window;
