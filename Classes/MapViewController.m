@@ -215,15 +215,6 @@
 		NSNumber *minLon = [NSNumber numberWithDouble:0.0];
 		NSNumber *maxLon = [NSNumber numberWithDouble:0.0];
 		
-        
-        
-        
-        [self drawRoute:sortedCoords];
-        
-        
-        
-        
-        
 		for ( Coord *coord in sortedCoords )
 		{
 			// only plot unique coordinates to our map for performance reasons
@@ -251,6 +242,8 @@
 					maxLat = coord.latitude;
 					minLon = coord.longitude;
 					maxLon = coord.longitude;
+                    
+                    [mapView addAnnotation:pin];
 				}
 				else
 				{
@@ -275,8 +268,10 @@
 			// update last coord pointer so we can cull redundant coords above
 			last = coord;
 		}
-		
-		NSLog(@"added %d unique GPS coordinates of %d to map", count, [sortedCoords count]);
+        
+        // draw a polyline for route
+		[self drawRoute:sortedCoords];
+		//NSLog(@"added %d unique GPS coordinates of %d to map", count, [sortedCoords count]);
 		
 		// add end point as a pin annotation
 		if ( last == [sortedCoords lastObject] )
@@ -284,6 +279,7 @@
 			pin.last = YES;
 			pin.title = @"End";
 			pin.subtitle = [dateFormatter stringFromDate:last.recorded];
+            [mapView addAnnotation:pin];
 		}
 		
 		// if we had at least 1 coord
@@ -354,13 +350,13 @@
 }
 
 
-- (void) drawRoute:(NSArray *) path
+- (void)drawRoute:(NSArray *)path
 {
-    NSInteger numberOfSteps = path.count;
+    NSInteger numberOfCoords = path.count;
     
-    CLLocationCoordinate2D coordinates[numberOfSteps];
-    for (NSInteger index = 0; index < numberOfSteps; index++) {
-        
+    CLLocationCoordinate2D coordinates[numberOfCoords];
+    for (NSInteger index = 0; index < numberOfCoords; index++)
+    {
         Coord *coordinate = [path objectAtIndex:index];
         CLLocationCoordinate2D locationCoord;
         locationCoord.latitude = (CLLocationDegrees)[coordinate.latitude doubleValue];
@@ -368,7 +364,7 @@
         coordinates[index] = locationCoord;
     }
     
-    MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coordinates count:numberOfSteps];
+    MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coordinates count:numberOfCoords];
     [mapView addOverlay:polyLine];
 }
 
