@@ -65,6 +65,9 @@
 	UITableViewCell *personalInfoCell;
 	*/
 	BOOL				didUpdateUserLocation;
+    
+    IBOutlet NSLayoutConstraint *startButtonWidthContraint;
+    
 	IBOutlet MKMapView	*mapView;
 	
 	IBOutlet UIButton *startButton;
@@ -87,6 +90,7 @@
 
 //@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
+@property (strong, nonatomic) NSLayoutConstraint *startButtonWidthContraint;
 @property (strong, nonatomic) MKMapView *mapView;
 
 

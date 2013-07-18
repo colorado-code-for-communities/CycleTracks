@@ -57,6 +57,10 @@
 		64F823E1106AC151001413F8 /* SaveRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F823E0106AC151001413F8 /* SaveRequest.m */; };
 		64F824E6106AFFA4001413F8 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F824E5106AFFA4001413F8 /* PersonalInfoViewController.m */; };
 		64FCC5B811352371000FA1B6 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FCC5B711352371000FA1B6 /* 20-gear2.png */; };
+		D02F63E917974D9E00A2BA7F /* OBBlendedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02F63E817974D9E00A2BA7F /* OBBlendedImageView.m */; };
+		D02F63EC1797507E00A2BA7F /* noise.png in Resources */ = {isa = PBXBuildFile; fileRef = D02F63EA1797507E00A2BA7F /* noise.png */; };
+		D02F63ED1797507E00A2BA7F /* noise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02F63EB1797507E00A2BA7F /* noise@2x.png */; };
+		D02F63F01797542D00A2BA7F /* UIColor+OBThemes.m in Sources */ = {isa = PBXBuildFile; fileRef = D02F63EF1797542D00A2BA7F /* UIColor+OBThemes.m */; };
 		D0C8010F17909F96003817A6 /* OBMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8010917909F96003817A6 /* OBMasterViewController.m */; };
 		D0C8011017909F96003817A6 /* OpenBike.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C8010A17909F96003817A6 /* OpenBike.storyboard */; };
 		D0C8011117909F96003817A6 /* OpenBikeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C8010C17909F96003817A6 /* OpenBikeSegue.m */; };
@@ -189,6 +193,12 @@
 		64F824E5106AFFA4001413F8 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoViewController.m; sourceTree = "<group>"; };
 		64FCC5B711352371000FA1B6 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20-gear2.png"; path = "../20-gear2.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* OpenBike-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OpenBike-Info.plist"; sourceTree = "<group>"; };
+		D02F63E717974D9E00A2BA7F /* OBBlendedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBBlendedImageView.h; sourceTree = "<group>"; };
+		D02F63E817974D9E00A2BA7F /* OBBlendedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBBlendedImageView.m; sourceTree = "<group>"; };
+		D02F63EA1797507E00A2BA7F /* noise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noise.png; sourceTree = "<group>"; };
+		D02F63EB1797507E00A2BA7F /* noise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noise@2x.png"; sourceTree = "<group>"; };
+		D02F63EE1797542D00A2BA7F /* UIColor+OBThemes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+OBThemes.h"; sourceTree = "<group>"; };
+		D02F63EF1797542D00A2BA7F /* UIColor+OBThemes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OBThemes.m"; sourceTree = "<group>"; };
 		D0C8010817909F96003817A6 /* OBMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBMasterViewController.h; sourceTree = "<group>"; };
 		D0C8010917909F96003817A6 /* OBMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBMasterViewController.m; sourceTree = "<group>"; };
 		D0C8010A17909F96003817A6 /* OpenBike.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OpenBike.storyboard; sourceTree = "<group>"; };
@@ -322,6 +332,10 @@
 				64119F021069ACF800C201F0 /* TripManager.h */,
 				64119F031069ACF800C201F0 /* TripManager.m */,
 				6433E54E106D542100C27387 /* TripPurposeDelegate.h */,
+				D02F63E717974D9E00A2BA7F /* OBBlendedImageView.h */,
+				D02F63E817974D9E00A2BA7F /* OBBlendedImageView.m */,
+				D02F63EE1797542D00A2BA7F /* UIColor+OBThemes.h */,
+				D02F63EF1797542D00A2BA7F /* UIColor+OBThemes.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -422,6 +436,8 @@
 		6411A16A106A05DE00C201F0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D02F63EA1797507E00A2BA7F /* noise.png */,
+				D02F63EB1797507E00A2BA7F /* noise@2x.png */,
 				D0C8011E1790A0B4003817A6 /* grip.png */,
 				D0C8011F1790A0B4003817A6 /* grip@2x.png */,
 				E0D3A4DF1772803A009653AD /* icon-114.png */,
@@ -703,6 +719,8 @@
 				D0C8011D17909FE3003817A6 /* README.md in Resources */,
 				D0C801201790A0B4003817A6 /* grip.png in Resources */,
 				D0C801211790A0B4003817A6 /* grip@2x.png in Resources */,
+				D02F63EC1797507E00A2BA7F /* noise.png in Resources */,
+				D02F63ED1797507E00A2BA7F /* noise@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +767,8 @@
 				D0C8011117909F96003817A6 /* OpenBikeSegue.m in Sources */,
 				D0C8011217909F96003817A6 /* SideNavigationTableViewController.m in Sources */,
 				D0C8011C17909FE3003817A6 /* JSSlidingViewController.m in Sources */,
+				D02F63E917974D9E00A2BA7F /* OBBlendedImageView.m in Sources */,
+				D02F63F01797542D00A2BA7F /* UIColor+OBThemes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

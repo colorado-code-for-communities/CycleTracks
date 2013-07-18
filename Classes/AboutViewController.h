@@ -36,6 +36,7 @@
 
 @interface AboutViewController : UIViewController <UIWebViewDelegate> {
 	IBOutlet UIWebView	*webView;
+    IBOutlet UILabel *versionLabel;
 }
 
 @end

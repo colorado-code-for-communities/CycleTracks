@@ -57,6 +57,7 @@
 
 @implementation RecordTripViewController
 
+@synthesize startButtonWidthContraint;
 @synthesize mapView = _mapView;
 @synthesize locationManager, tripManager, reminderManager;
 @synthesize startButton, cancelButton;
@@ -498,7 +499,10 @@
    }
    
    [startButton setTitle:@"Start" forState:UIControlStateNormal];
-   startButton.frame = CGRectMake( 24.0, 198.0, 272.0, kCustomButtonHeight );
+    [UIView animateWithDuration:.75f animations:^{
+        startButtonWidthContraint.constant = kOriginalStartButtonWidth;
+    }];
+
 	cancelButton.hidden = TRUE;
    
    // kill the timer that is updating the UI and reset the UI counter
@@ -576,7 +580,10 @@
    
    [startButton setTitle:@"Save" forState:UIControlStateNormal];
    
-   startButton.frame = CGRectMake(24.0, 198.0, kCustomButtonWidth, kCustomButtonHeight);
+     [UIView animateWithDuration:.75f animations:^{
+         startButtonWidthContraint.constant = kCustomButtonWidth;
+        }];
+    
    cancelButton.enabled = TRUE;
    cancelButton.hidden = FALSE;
 	

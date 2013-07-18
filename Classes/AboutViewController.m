@@ -59,9 +59,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // instructions load from URL
 	self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 	NSLog(@"About viewDidLoad");
 	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:kInstructionsURL]]];
+    
+    // build version string
+    NSString *marketingVersion = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"];
+    NSString *applicationVersion = [[[NSBundle mainBundle] infoDictionary] valueForKey:(id)kCFBundleVersionKey];
+    versionLabel.text = [NSString stringWithFormat:@"version: %@ (%@)", marketingVersion, applicationVersion];
 }
 
 

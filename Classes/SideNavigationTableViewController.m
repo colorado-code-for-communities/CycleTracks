@@ -10,6 +10,8 @@
 #import "OBMasterViewController.h"
 #import "CycleTracksAppDelegate.h"
 #import "OpenBikeSegue.h"
+#import "OBBlendedImageView.h"
+#import "UIColor+OBThemes.h"
 
 @interface SideNavigationTableViewController ()
 
@@ -31,6 +33,12 @@
 - (void)awakeFromNib
 {
     _delegate = (id<OBMasterViewControllerDelegate>)[[UIApplication sharedApplication] delegate];
+    
+    // set patterned background
+    OBBlendedImageView *backgroundView = [[OBBlendedImageView alloc] initWithFrame:CGRectZero];
+    backgroundView.image = [UIImage imageNamed:@"noise"];
+    backgroundView.backgroundColor = [UIColor sideMenuBackgroundColor];
+    self.tableView.backgroundView = backgroundView;
 }
 
 - (void)viewDidLoad

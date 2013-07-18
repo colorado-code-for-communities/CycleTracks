@@ -39,6 +39,7 @@
 #import "MapCoord.h"
 #import "MapViewController.h"
 #import "Trip.h"
+#import "UIColor+OBThemes.h"
 
 
 #define kFudgeFactor	1.5
@@ -214,6 +215,15 @@
 		NSNumber *minLon = [NSNumber numberWithDouble:0.0];
 		NSNumber *maxLon = [NSNumber numberWithDouble:0.0];
 		
+        
+        
+        
+        [self drawRoute:sortedCoords];
+        
+        
+        
+        
+        
 		for ( Coord *coord in sortedCoords )
 		{
 			// only plot unique coordinates to our map for performance reasons
@@ -258,7 +268,7 @@
 						maxLon = coord.longitude;
 				}				
 				
-				[mapView addAnnotation:pin];
+				////[mapView addAnnotation:pin];
 				count++;
 			}
 			
@@ -344,6 +354,24 @@
 }
 
 
+- (void) drawRoute:(NSArray *) path
+{
+    NSInteger numberOfSteps = path.count;
+    
+    CLLocationCoordinate2D coordinates[numberOfSteps];
+    for (NSInteger index = 0; index < numberOfSteps; index++) {
+        
+        Coord *coordinate = [path objectAtIndex:index];
+        CLLocationCoordinate2D locationCoord;
+        locationCoord.latitude = (CLLocationDegrees)[coordinate.latitude doubleValue];
+        locationCoord.longitude = (CLLocationDegrees)[coordinate.longitude doubleValue];
+        coordinates[index] = locationCoord;
+    }
+    
+    MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coordinates count:numberOfSteps];
+    [mapView addOverlay:polyLine];
+}
+
 
 
 #pragma mark MKMapViewDelegate methods
@@ -369,6 +397,18 @@
 	[loading removeView];
 }
 
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
+{
+    if( [overlay isKindOfClass:[MKPolyline class]] )
+    {
+        MKPolylineView *overlayView = [[MKPolylineView alloc] initWithPolyline:overlay];
+        overlayView.strokeColor = [UIColor mapRoutePolyLineColor];
+        overlayView.lineWidth = 5.f;
+        return overlayView;
+    }
+    
+    return nil;
+}
 
 - (MKAnnotationView *)mapView:(MKMapView *)_mapView
 			viewForAnnotation:(id <MKAnnotation>)annotation

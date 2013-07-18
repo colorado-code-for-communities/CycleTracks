@@ -44,6 +44,7 @@
 #define kCounterTimeInterval	(0.5)
 
 #define kCustomButtonWidth		(127.0)
+#define kOriginalStartButtonWidth (280.0)
 #define kCustomButtonHeight	(42.0)
 
 #define kCounterFontSize		(26.0)
