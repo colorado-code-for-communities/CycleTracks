@@ -1,7 +1,7 @@
 Open Bike
 www.openbike.co
 
-Unless otherwise indicated, Open Bike for iOS is Copyright © 2013 Permusoft Corporation. All Rights Reserved.
+Unless otherwise indicated, Open Bike for iOS is Copyright © 2013 <XXX>. All Rights Reserved.
 
 
 
