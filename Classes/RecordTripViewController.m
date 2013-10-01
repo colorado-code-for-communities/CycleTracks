@@ -323,6 +323,11 @@
    [super viewDidLoad];
 	//[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackTranslucent;
    
+    if([UIViewController instancesRespondToSelector:@selector(edgesForExtendedLayout)])
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
    UIImage *startButtonImage = [UIImage imageNamed:@"start_button"];
    UIImage *cancelButtonImage = [UIImage imageNamed:@"cancel_button"];
    

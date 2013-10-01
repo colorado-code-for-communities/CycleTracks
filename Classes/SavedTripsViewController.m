@@ -171,11 +171,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if([UIViewController instancesRespondToSelector:@selector(edgesForExtendedLayout)])
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
 	self.tableView.rowHeight = kRowHeight;
 
 	// Set up the buttons.
+    self.editButtonItem.style = UIBarButtonItemStyleDone;
 	self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+	//self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 	
 	// load trips from CoreData
 	[self refreshTableView];
@@ -587,8 +594,8 @@
 											   destructiveButtonTitle:nil
 													otherButtonTitles:@"Upload", nil];
 	
-	actionSheet.actionSheetStyle	= UIActionSheetStyleBlackTranslucent;
-	[actionSheet showInView:self.tabBarController.view];
+	actionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
+	[actionSheet showInView:self.view];
 }
 
 

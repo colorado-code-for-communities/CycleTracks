@@ -145,6 +145,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if([UIViewController instancesRespondToSelector:@selector(edgesForExtendedLayout)])
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 
 	// Set the title.
 	// self.title = @"Personal Info";
@@ -159,11 +164,12 @@
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+	//self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 
 	// Set up the buttons.
 	UIBarButtonItem* done = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
 																		  target:self action:@selector(done)];
+    done.tintColor = [UIColor whiteColor];
 	done.enabled = YES;
 	self.navigationItem.rightBarButtonItem = done;
 	

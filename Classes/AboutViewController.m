@@ -60,8 +60,13 @@
 {
     [super viewDidLoad];
     
+    if([UIViewController instancesRespondToSelector:@selector(edgesForExtendedLayout)])
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
     // instructions load from URL
-	self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+	//self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 	NSLog(@"About viewDidLoad");
 	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:kInstructionsURL]]];
     

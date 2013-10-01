@@ -33,7 +33,7 @@
         @[
           [storyboard instantiateViewControllerWithIdentifier:@"TripRecordNav"], // 0
           [storyboard instantiateViewControllerWithIdentifier:@"SavedTripsNav"], // 1
-          [storyboard instantiateViewControllerWithIdentifier:@"AboutInfo"], // 2
+          [storyboard instantiateViewControllerWithIdentifier:@"AboutNav"], // 2
           [storyboard instantiateViewControllerWithIdentifier:@"PersonalInfoNav"] // 3
           // add others
           ];

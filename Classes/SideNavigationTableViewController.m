@@ -39,6 +39,7 @@
     backgroundView.image = [UIImage imageNamed:@"noise"];
     backgroundView.backgroundColor = [UIColor sideMenuBackgroundColor];
     self.tableView.backgroundView = backgroundView;
+    //self.tableView.sectionIndexTrackingBackgroundColor = [UIColor whiteColor];
 }
 
 - (void)viewDidLoad
