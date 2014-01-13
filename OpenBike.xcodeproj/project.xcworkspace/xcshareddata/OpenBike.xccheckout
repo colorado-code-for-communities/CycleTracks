@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F1960D4B-5807-4207-BA0E-ECC11EFAF027</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OpenBike</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EEF10564-BE00-45A5-8628-8ECEA1D533EA</key>
+		<string>https://github.com/colorado-code-for-communities/CycleTracks.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OpenBike.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EEF10564-BE00-45A5-8628-8ECEA1D533EA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/colorado-code-for-communities/CycleTracks.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EEF10564-BE00-45A5-8628-8ECEA1D533EA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EEF10564-BE00-45A5-8628-8ECEA1D533EA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CycleTracks iOS 7</string>
+		</dict>
+	</array>
+</dict>
+</plist>

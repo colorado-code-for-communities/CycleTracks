@@ -57,6 +57,7 @@
 		64F823E1106AC151001413F8 /* SaveRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F823E0106AC151001413F8 /* SaveRequest.m */; };
 		64F824E6106AFFA4001413F8 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F824E5106AFFA4001413F8 /* PersonalInfoViewController.m */; };
 		64FCC5B811352371000FA1B6 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64FCC5B711352371000FA1B6 /* 20-gear2.png */; };
+		A6EA33C51810A9B0007911BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6EA33C41810A9B0007911BB /* Images.xcassets */; };
 		D02F63E917974D9E00A2BA7F /* OBBlendedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02F63E817974D9E00A2BA7F /* OBBlendedImageView.m */; };
 		D02F63EC1797507E00A2BA7F /* noise.png in Resources */ = {isa = PBXBuildFile; fileRef = D02F63EA1797507E00A2BA7F /* noise.png */; };
 		D02F63ED1797507E00A2BA7F /* noise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02F63EB1797507E00A2BA7F /* noise@2x.png */; };
@@ -82,8 +83,6 @@
 		E0123BCB1783E6940063842F /* NSString+PSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E0123BC31783E6940063842F /* NSString+PSExtensions.m */; };
 		E0123BCC1783E6940063842F /* PSExtensions+Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0123BC51783E6940063842F /* PSExtensions+Foundation.m */; };
 		E0123BCD1783E6940063842F /* UIDevice+UDID.m in Sources */ = {isa = PBXBuildFile; fileRef = E0123BC81783E6940063842F /* UIDevice+UDID.m */; };
-		E0D3A4DE17728032009653AD /* icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D3A4DD17728032009653AD /* icon-57.png */; };
-		E0D3A4E01772803A009653AD /* icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D3A4DF1772803A009653AD /* icon-114.png */; };
 		E0FA74B11774FA0F004CF28F /* TripDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FA74B01774FA0F004CF28F /* TripDetailViewController.m */; };
 		E0FA74B41774FA3F004CF28F /* StarSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FA74B31774FA3F004CF28F /* StarSlider.m */; };
 		E0FA74B61774FA7B004CF28F /* TripDetailPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0FA74B51774FA7B004CF28F /* TripDetailPicker.xib */; };
@@ -193,6 +192,13 @@
 		64F824E5106AFFA4001413F8 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoViewController.m; sourceTree = "<group>"; };
 		64FCC5B711352371000FA1B6 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20-gear2.png"; path = "../20-gear2.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* OpenBike-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OpenBike-Info.plist"; sourceTree = "<group>"; };
+		A6EA33C41810A9B0007911BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = OpenBike/Images.xcassets; sourceTree = "<group>"; };
+		A6EA33C618172C1C007911BB /* openbike_logo-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openbike_logo-57.png"; sourceTree = "<group>"; };
+		A6EA33C718172C33007911BB /* openbike_logo-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openbike_logo-114.png"; sourceTree = "<group>"; };
+		A6EA33C818172C49007911BB /* openbike_logo-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openbike_logo-120.png"; sourceTree = "<group>"; };
+		A6EA33C918172C6D007911BB /* openbike_logo-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openbike_logo-29.png"; sourceTree = "<group>"; };
+		A6EA33CA18172F44007911BB /* openbike_logo-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openbike_logo-58.png"; sourceTree = "<group>"; };
+		A6EA33CB18172F57007911BB /* openbike_logo-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openbike_logo-80.png"; sourceTree = "<group>"; };
 		D02F63E717974D9E00A2BA7F /* OBBlendedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBBlendedImageView.h; sourceTree = "<group>"; };
 		D02F63E817974D9E00A2BA7F /* OBBlendedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBBlendedImageView.m; sourceTree = "<group>"; };
 		D02F63EA1797507E00A2BA7F /* noise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noise.png; sourceTree = "<group>"; };
@@ -237,8 +243,6 @@
 		E0123BC71783E6940063842F /* UIDevice+UDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UDID.h"; sourceTree = "<group>"; };
 		E0123BC81783E6940063842F /* UIDevice+UDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+UDID.m"; sourceTree = "<group>"; };
 		E01E223117761CDF007653C4 /* legal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = legal.txt; sourceTree = "<group>"; };
-		E0D3A4DD17728032009653AD /* icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57.png"; sourceTree = "<group>"; };
-		E0D3A4DF1772803A009653AD /* icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-114.png"; sourceTree = "<group>"; };
 		E0FA74AF1774FA0F004CF28F /* TripDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripDetailViewController.h; sourceTree = "<group>"; };
 		E0FA74B01774FA0F004CF28F /* TripDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripDetailViewController.m; sourceTree = "<group>"; };
 		E0FA74B21774FA3F004CF28F /* StarSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarSlider.h; sourceTree = "<group>"; };
@@ -378,6 +382,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A6EA33C41810A9B0007911BB /* Images.xcassets */,
 				6411A196106A90FB00C201F0 /* TabBarIcons */,
 				6411A185106A90E400C201F0 /* TripPurposePickerIcons v2 */,
 				6411A16A106A05DE00C201F0 /* Images */,
@@ -436,12 +441,16 @@
 		6411A16A106A05DE00C201F0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A6EA33CB18172F57007911BB /* openbike_logo-80.png */,
+				A6EA33CA18172F44007911BB /* openbike_logo-58.png */,
+				A6EA33C918172C6D007911BB /* openbike_logo-29.png */,
+				A6EA33C818172C49007911BB /* openbike_logo-120.png */,
+				A6EA33C718172C33007911BB /* openbike_logo-114.png */,
+				A6EA33C618172C1C007911BB /* openbike_logo-57.png */,
 				D02F63EA1797507E00A2BA7F /* noise.png */,
 				D02F63EB1797507E00A2BA7F /* noise@2x.png */,
 				D0C8011E1790A0B4003817A6 /* grip.png */,
 				D0C8011F1790A0B4003817A6 /* grip@2x.png */,
-				E0D3A4DF1772803A009653AD /* icon-114.png */,
-				E0D3A4DD17728032009653AD /* icon-57.png */,
 				E0FA74B71774FAD8004CF28F /* Star-White-Half.png */,
 				E0FA74B81774FAD8004CF28F /* Star-White.png */,
 				64C8D40411386C9F008BCADE /* LCD-screen-288x126.png */,
@@ -636,7 +645,12 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 7UTV2YWX68;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OpenBike" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -663,6 +677,7 @@
 				6411A16C106A05FE00C201F0 /* LargeCounter.png in Resources */,
 				6411A199106A90FB00C201F0 /* tabbar_record.png in Resources */,
 				6411A19A106A90FB00C201F0 /* tabbar_view.png in Resources */,
+				A6EA33C51810A9B0007911BB /* Images.xcassets in Resources */,
 				6433E62F106D6BC200C27387 /* Icon.png in Resources */,
 				64577E29106DC2FD003ACBFD /* dist.plist in Resources */,
 				64AF2EE210714BC900DDDF07 /* save_button.png in Resources */,
@@ -708,8 +723,6 @@
 				EE2D2BF6169CCE1E0059BCC0 /* commute2@2x.png in Resources */,
 				EE2D2BF8169CD17F0059BCC0 /* start_button@2x.png in Resources */,
 				EE2D2BFA169CD1EE0059BCC0 /* save_button@2x.png in Resources */,
-				E0D3A4DE17728032009653AD /* icon-57.png in Resources */,
-				E0D3A4E01772803A009653AD /* icon-114.png in Resources */,
 				E0FA74B61774FA7B004CF28F /* TripDetailPicker.xib in Resources */,
 				E0FA74B91774FAD8004CF28F /* Star-White-Half.png in Resources */,
 				E0FA74BA1774FAD8004CF28F /* Star-White.png in Resources */,
@@ -779,8 +792,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -789,10 +804,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OpenBike_Prefix.pch;
 				INFOPLIST_FILE = "OpenBike-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = OpenBike;
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -800,25 +817,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: PermuSoft Corporation (9VXMU62624)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OpenBike_Prefix.pch;
 				INFOPLIST_FILE = "OpenBike-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = OpenBike;
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "73B33A7C-9967-4976-B6A0-E2B846B7FA87";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		64577E10106DB5D8003ACBFD /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: PermuSoft Corporation (9VXMU62624)";
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -834,26 +854,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = dist.plist;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OpenBike_Prefix.pch;
 				INFOPLIST_FILE = "OpenBike-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = OpenBike;
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Distribution;
 		};
 		64577E12106DB5E6003ACBFD /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = dist.plist;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -869,10 +892,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = dist.plist;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -880,16 +905,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OpenBike_Prefix.pch;
 				INFOPLIST_FILE = "OpenBike-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = OpenBike;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Beta;
 		};
 		64D31CD9108E80E400D52130 /* Release Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -904,31 +930,35 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = dist.plist;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OpenBike_Prefix.pch;
 				INFOPLIST_FILE = "OpenBike-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = OpenBike;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Release Beta";
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
@@ -937,7 +967,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: PermuSoft Corporation (9VXMU62624)";
 				GCC_C_LANGUAGE_STANDARD = c99;
